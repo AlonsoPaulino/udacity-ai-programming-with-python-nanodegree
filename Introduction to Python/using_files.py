@@ -8,3 +8,9 @@ print(file_data)
 f = open('another_file.txt', 'w')
 f.write('Hello World!')
 f.close()
+
+#with keyboard allows you to open a file, perform operations and automatically close it
+with open('another_file.txt', 'r') as f:
+    file_data = f.read()
+
+print(file_data)
