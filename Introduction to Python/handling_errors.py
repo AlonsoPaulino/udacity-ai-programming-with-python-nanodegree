@@ -25,3 +25,15 @@ while True:
 #     # some code
 # except KeyboardInterrupt:
 #     # some code
+
+# try:
+#     # some code
+# except ZeroDivisionError as e:
+#    # some code
+#    print("ZeroDivisionError occurred: {}".format(e))
+
+# try:
+#     # some code
+# except Exception as e:
+#    # some code
+#    print("Exception occurred: {}".format(e))
