@@ -74,7 +74,7 @@ def main():
     #             classify_images(in_arg.dir, results, in_arg.arch)
     # Creates Classifier Labels with classifier function, Compares Labels, 
     # and adds these results to the results dictionary - results
-    classify_images(None, results, None)
+    classify_images(in_arg.dir, results, in_arg.arch)
 
     # Function that checks Results Dictionary using results    
     check_classifying_images(results)    
@@ -116,7 +116,7 @@ def main():
     print_results(results, results_stats, None, True, True)
 
     # For project timing test purposes only
-    sleep(10)
+    # sleep(10)
     
     # TODO 0: Measure total program runtime by collecting end time
     end_time = time()
