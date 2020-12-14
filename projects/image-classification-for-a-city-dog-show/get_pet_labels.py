@@ -42,7 +42,21 @@ def get_pet_labels(image_dir):
     """
     # Replace None with the results_dic dictionary that you created with this
     # function
-  
-    
+    file_name_list = listdir("pet_images/")
+    results_dic = dict()
 
-    return None
+    for file_name in file_name_list:
+      if file_name not in results_dic:
+        results_dic[file_name] = [create_label(file_name)]
+  
+    return results_dic
+
+def create_label(file_name):
+	words = file_name.split('_')
+	result = ""
+	for word in words:
+		if word.isalpha():
+			if len(result) > 0:
+				result += " "
+			result += word
+	return result.lower()
