@@ -71,12 +71,12 @@ def adjust_results4_isadog(results_dic, dogfile):
 
     with open(dogfile) as f:
         for line in f:
-            dogs = line.split(',')
+            dogs = line.rstrip('\n').strip().lower().split(',')
             for dog in dogs:
-                dog_names[dog.rstrip().strip()] = 1
+                dog_names[dog.strip()] = 1
     
     for filename, labels in results_dic.items():
-        results_dic[filename].extend([1 if labels[1] in dog_names else 0, 1 if labels[2] in dog_names else 0])
+        results_dic[filename].extend([1 if labels[0] in dog_names else 0, 1 if labels[1] in dog_names else 0])
             
         
             

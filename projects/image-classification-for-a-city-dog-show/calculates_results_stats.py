@@ -94,7 +94,7 @@ def calculates_results_stats(results_dic):
         elif results[4] == 0 and results[3] == 0:
             n_correct_notdogs += 1
         
-        if results[3] == 1 and results[2] == 1 and results[4] == 1:
+        if results[3] == 1 and results[2] == 1:
             n_correct_breed += 1
 
     results_stats_dic["n_images"] = n_images
