@@ -78,7 +78,7 @@ def calculates_results_stats(results_dic):
     n_correct_notdogs = 0
     n_correct_breed = 0
 
-    for file_name, results in results_dic.items():
+    for _, results in results_dic.items():
         n_images += 1
     
         if results[3] == 1:
