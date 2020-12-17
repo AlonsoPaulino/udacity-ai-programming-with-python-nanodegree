@@ -83,7 +83,7 @@ def calculates_results_stats(results_dic):
     
         if results[3] == 1:
             n_dogs_img += 1
-        else: 
+        else:
             n_notdogs_img += 1
     
         if results[2] == 1:

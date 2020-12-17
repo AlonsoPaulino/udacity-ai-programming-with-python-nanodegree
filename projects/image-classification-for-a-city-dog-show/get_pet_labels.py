@@ -59,4 +59,4 @@ def create_label(file_name):
 			if len(result) > 0:
 				result += " "
 			result += word
-	return result.lower()
+	return result.lower().strip()
