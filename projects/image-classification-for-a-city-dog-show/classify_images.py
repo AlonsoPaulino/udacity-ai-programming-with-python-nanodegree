@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/classify_images.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                 
+# PROGRAMMER: Luis Alonso Paulino Flores
+# DATE CREATED: 12/14/2020                                
 # REVISED DATE: 
 # PURPOSE: Create a function classify_images that uses the classifier function 
 #          to create the classifier labels and then compares the classifier 
@@ -68,7 +68,3 @@ def classify_images(images_dir, results_dic, model):
     for filename, labels in results_dic.items():
         classifier_label = classifier(images_dir + filename, model).lower().strip()
         results_dic[filename].extend([classifier_label, 1 if labels[0] in classifier_label else 0])
-        
-
-
-
