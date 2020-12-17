@@ -69,15 +69,6 @@ def adjust_results4_isadog(results_dic, dogfile):
     """           
     dog_names = dict()
 
-    # with open(dogfile) as f:
-    #     for line in f:
-    #         dogs = line.rstrip('\n').strip().lower().split(',')
-    #         for dog in dogs:
-    #             dog_names[dog.strip()] = 1
-    
-    # for filename, labels in results_dic.items():
-    #     results_dic[filename].extend([1 if labels[0] in dog_names else 0, 1 if labels[1] in dog_names else 0])
-
     with open(dogfile) as f:
         for line in f:
             line = line.rstrip('\n').lower()
@@ -86,4 +77,3 @@ def adjust_results4_isadog(results_dic, dogfile):
 
     for filename, labels in results_dic.items():
         results_dic[filename].extend([1 if labels[0] in dog_names else 0, 1 if labels[1] in dog_names else 0])
-        
