@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/print_results.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:
+# PROGRAMMER: Luis Alonso Paulino Flores
+# DATE CREATED: 12/16/2020
 # REVISED DATE: 
 # PURPOSE: Create a function print_results that prints the results statistics
 #          from the results statistics dictionary (results_stats_dic). It 
@@ -62,5 +62,33 @@ def print_results(results_dic, results_stats_dic, model,
     Returns:
            None - simply printing results.
     """    
-    None
-                
+
+    n_images = results_stats_dic['n_images']
+    n_dogs_img = results_stats_dic['n_dogs_img']
+    n_notdogs_img = results_stats_dic['n_notdogs_img']
+    n_correct_dogs = results_stats_dic['n_correct_dogs']
+    n_correct_notdogs = results_stats_dic['n_correct_notdogs']
+    n_correct_breed = results_stats_dic['n_correct_breed']
+
+    print('************************************************************')
+    print('CNN Model: {}'.format(model))
+    print('Number of Images: {}'.format(n_images))
+    print('Number of Dog Images: {}'.format(n_dogs_img))
+    print('Number of "Not-a" Dog Images: {}'.format(n_notdogs_img))
+    print('------------------------------------------------------------')
+    print('% Correct Dogs: {}'.format(results_stats_dic['pct_correct_dogs']))
+    print('% Correct Breed: {}'.format(results_stats_dic['pct_correct_breed']))
+    print('% Correct "Not-a" Dog: {}'.format(results_stats_dic['pct_correct_notdogs']))
+    print('% Match: {}'.format(results_stats_dic['pct_match']))
+
+    if print_incorrect_dogs and n_correct_dogs + n_correct_notdogs != n_images:
+        print('------------------------------------------------------------')
+        print('Misclassified Dogs')
+        for key in results_dic:
+            print('{} : {}'.format(key, str(sum(results_dic[key][3:]) == 1)))
+
+    if print_incorrect_breed and n_correct_dogs != n_correct_breed:
+        print('------------------------------------------------------------')
+        print("Misclassified Breed's of Dog")
+        for key in results_dic:
+            print('{} : {}'.format(key, str(sum(results_dic[key][3:]) == 2 and results_dic[key][2] == 0)))
