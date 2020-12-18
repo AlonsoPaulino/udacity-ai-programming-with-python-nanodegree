@@ -63,9 +63,8 @@ def print_results(results_dic, results_stats_dic, model,
            None - simply printing results.
     """    
 
+    # Keeping a reference to each of them since they are being used more than once
     n_images = results_stats_dic['n_images']
-    n_dogs_img = results_stats_dic['n_dogs_img']
-    n_notdogs_img = results_stats_dic['n_notdogs_img']
     n_correct_dogs = results_stats_dic['n_correct_dogs']
     n_correct_notdogs = results_stats_dic['n_correct_notdogs']
     n_correct_breed = results_stats_dic['n_correct_breed']
@@ -73,8 +72,8 @@ def print_results(results_dic, results_stats_dic, model,
     print('************************************************************')
     print('CNN Model: {}'.format(model))
     print('Number of Images: {}'.format(n_images))
-    print('Number of Dog Images: {}'.format(n_dogs_img))
-    print('Number of "Not-a" Dog Images: {}'.format(n_notdogs_img))
+    print('Number of Dog Images: {}'.format(results_stats_dic['n_dogs_img']))
+    print('Number of "Not-a" Dog Images: {}'.format(results_stats_dic['n_notdogs_img']))
     print('------------------------------------------------------------')
     print('% Correct Dogs: {}'.format(results_stats_dic['pct_correct_dogs']))
     print('% Correct Breed: {}'.format(results_stats_dic['pct_correct_breed']))
@@ -83,12 +82,16 @@ def print_results(results_dic, results_stats_dic, model,
 
     if print_incorrect_dogs and n_correct_dogs + n_correct_notdogs != n_images:
         print('------------------------------------------------------------')
-        print('Misclassified Dogs')
-        for key in results_dic:
-            print('{} : {}'.format(key, str(sum(results_dic[key][3:]) == 1)))
+        print('                  Misclassified Dogs')
+        print('------------------------------------------------------------')
+        for key, value in results_dic.items():
+            if sum(value[3:]) == 1:
+                print("Image label: {}    -    Classifier label: {}".format(value[0], value[1]))
 
     if print_incorrect_breed and n_correct_dogs != n_correct_breed:
         print('------------------------------------------------------------')
-        print("Misclassified Breed's of Dog")
-        for key in results_dic:
-            print('{} : {}'.format(key, str(sum(results_dic[key][3:]) == 2 and results_dic[key][2] == 0)))
+        print("              Misclassified Breed's of Dog")
+        print('------------------------------------------------------------')
+        for key, value in results_dic.items():
+            if sum(results_dic[key][3:]) == 2 and results_dic[key][2] == 0:
+                print("Image label: {}    -    Classifier label: {}".format(value[0], value[1]))

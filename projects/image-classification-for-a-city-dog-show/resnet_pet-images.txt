@@ -327,88 +327,14 @@ Number of "Not-a" Dog Images: 10
 % Correct "Not-a" Dog: 90.0
 % Match: 82.5
 ------------------------------------------------------------
-Misclassified Dogs
-cat_01.jpg : True
-Poodle_07927.jpg : False
-cat_02.jpg : False
-Great_dane_05320.jpg : False
-Dalmatian_04068.jpg : False
-gecko_02.jpg : False
-cat_07.jpg : False
-Great_pyrenees_05435.jpg : False
-German_shepherd_dog_04931.jpg : False
-German_shepherd_dog_04890.jpg : False
-Collie_03797.jpg : False
-Saint_bernard_08010.jpg : False
-Dalmatian_04037.jpg : False
-Rabbit_002.jpg : False
-polar_bear_04.jpg : False
-Poodle_07956.jpg : False
-fox_squirrel_01.jpg : False
-Beagle_01170.jpg : False
-Boston_terrier_02285.jpg : False
-skunk_029.jpg : False
-Boston_terrier_02303.jpg : False
-Miniature_schnauzer_06884.jpg : False
-Beagle_01141.jpg : False
-Basenji_00974.jpg : False
-gecko_80.jpg : False
-Dalmatian_04017.jpg : False
-Boxer_02426.jpg : False
-Basenji_00963.jpg : False
-Boston_terrier_02259.jpg : False
-Golden_retriever_05182.jpg : False
-Golden_retriever_05223.jpg : False
-great_horned_owl_02.jpg : False
-Saint_bernard_08036.jpg : False
-Golden_retriever_05195.jpg : False
-Beagle_01125.jpg : False
-Great_pyrenees_05367.jpg : False
-German_shorthaired_pointer_04986.jpg : False
-Cocker_spaniel_03750.jpg : False
-Golden_retriever_05257.jpg : False
-Basset_hound_01034.jpg : False
+                  Misclassified Dogs
 ------------------------------------------------------------
-Misclassified Breed's of Dog
-cat_01.jpg : False
-Poodle_07927.jpg : False
-cat_02.jpg : False
-Great_dane_05320.jpg : False
-Dalmatian_04068.jpg : False
-gecko_02.jpg : False
-cat_07.jpg : False
-Great_pyrenees_05435.jpg : False
-German_shepherd_dog_04931.jpg : False
-German_shepherd_dog_04890.jpg : False
-Collie_03797.jpg : False
-Saint_bernard_08010.jpg : False
-Dalmatian_04037.jpg : False
-Rabbit_002.jpg : False
-polar_bear_04.jpg : False
-Poodle_07956.jpg : False
-fox_squirrel_01.jpg : False
-Beagle_01170.jpg : True
-Boston_terrier_02285.jpg : False
-skunk_029.jpg : False
-Boston_terrier_02303.jpg : False
-Miniature_schnauzer_06884.jpg : False
-Beagle_01141.jpg : False
-Basenji_00974.jpg : False
-gecko_80.jpg : False
-Dalmatian_04017.jpg : False
-Boxer_02426.jpg : False
-Basenji_00963.jpg : False
-Boston_terrier_02259.jpg : False
-Golden_retriever_05182.jpg : True
-Golden_retriever_05223.jpg : False
-great_horned_owl_02.jpg : False
-Saint_bernard_08036.jpg : False
-Golden_retriever_05195.jpg : False
-Beagle_01125.jpg : False
-Great_pyrenees_05367.jpg : True
-German_shorthaired_pointer_04986.jpg : False
-Cocker_spaniel_03750.jpg : False
-Golden_retriever_05257.jpg : False
-Basset_hound_01034.jpg : False
+Image label: cat    -    Classifier label: norwegian elkhound, elkhound
+------------------------------------------------------------
+              Misclassified Breed's of Dog
+------------------------------------------------------------
+Image label: beagle    -    Classifier label: walker hound, walker foxhound
+Image label: golden retriever    -    Classifier label: leonberg
+Image label: great pyrenees    -    Classifier label: kuvasz
 
 ** Total Elapsed Runtime: 0:0:2
