@@ -46,7 +46,7 @@ def get_pet_labels(image_dir):
     results_dic = dict()
 
     for file_name in file_name_list:
-      if file_name not in results_dic:
+      if file_name not in results_dic and not file_name.startswith('.'):
         results_dic[file_name] = [create_label(file_name)]
   
     return results_dic
