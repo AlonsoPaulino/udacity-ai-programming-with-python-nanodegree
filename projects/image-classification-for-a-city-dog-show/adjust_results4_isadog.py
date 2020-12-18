@@ -76,4 +76,6 @@ def adjust_results4_isadog(results_dic, dogfile):
                 dog_names[line] = 1
 
     for filename, labels in results_dic.items():
-        results_dic[filename].extend([1 if labels[0] in dog_names else 0, 1 if labels[1] in dog_names else 0])
+        image_label_match_value = 1 if labels[0] in dog_names else 0
+        classifier_label_match_value = 1 if labels[1] in dog_names else 0
+        results_dic[filename].extend([image_label_match_value, classifier_label_match_value])
